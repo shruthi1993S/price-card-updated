@@ -1,0 +1,47 @@
+html, body {
+    height: 100%;
+  }
+
+  .row {
+    height: 100%;
+    align-items: center;
+ 
+  
+  }
+  
+  #pricing {
+    height: 100%;
+    padding: 100px;
+
+    background-color:rgb(52, 95, 175);
+   
+  }
+  
+  .card {
+    display: flex;
+    border: 1px solid black;
+    border-radius: 20px;
+   
+    
+  }
+  
+  .card-header {
+    color: white;
+    background-color: black;
+  }
+  
+  .pricing-column {
+    padding: 3% 2%;
+  }
+ 
+  button{
+    border-radius: 10px;
+  }
+  p{
+    text-align:left;
+    padding: 10px;
+  }
+
+
+  
+ 

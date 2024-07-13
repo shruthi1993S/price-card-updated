@@ -1,0 +1,60 @@
+html, body {
+    height: 100%;
+  }
+
+  .row {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+   
+  
+  }
+  
+  #pricing {
+    height: 50%;
+    text-align: center;
+    background:linear-gradient(to right ,rgb(45, 17, 170),rgb(108, 120, 187))
+   
+  }
+  
+  .card {
+   
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 45px;
+    width:300px;
+    
+    
+  }
+  
+  .card:hover{
+    background-color: rgb(83, 83, 214);
+    color: white;
+  }
+  .card-header {
+    color: white;
+    background-color: black;
+   
+   
+  }
+  
+
+ 
+  .oval-button{
+   
+    border-radius:25px;
+  }
+  p{
+    text-align:left;
+    padding: 10px;
+  }
+
+  .border{
+    background-color: white;
+  }
+
+
+ 
+
+
+  
