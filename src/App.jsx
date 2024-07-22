@@ -1,57 +1,64 @@
 import Post from "./Post";
-import { TiTick } from "react-icons/ti"
-import { RxCross2 } from "react-icons/rx";
+
+import './App.css'
+const plans = [
+  {
+    name: 'FREE',
+    price: '$0/month',
+    features: [
+      { name: 'Single User', isEnabled: true },
+      { name: '50GB Storage', isEnabled: true },
+      { name: 'Unlimited Public Projects', isEnabled: true },
+      { name: 'Community Access', isEnabled: true },
+      { name: 'Unlimited Private Projects', isEnabled: false },
+      { name: 'Dedicated Phone Support', isEnabled: false },
+      { name: 'Free Subdomain', isEnabled: false },
+      { name: 'Monthly Status Reports', isEnabled: false },
+    ],
+  },
+  {
+    name: 'PLUS',
+    price: '$9/month',
+    features: [
+      { name: '5 Users', isEnabled: true },
+      { name: '50GB Storage', isEnabled: true },
+      { name: 'Unlimited Public Projects', isEnabled: true },
+      { name: 'Community Access', isEnabled: true },
+      { name: 'Unlimited Private Projects', isEnabled: true },
+      { name: 'Dedicated Phone Support', isEnabled: true },
+      { name: 'Free Subdomain', isEnabled: true },
+      { name: 'Monthly Status Reports', isEnabled: false },
+    ],
+  },
+  {
+    name: 'PRO',
+    price: '$49/month',
+    features: [
+      { name: 'Unlimited Users', isEnabled: true },
+      { name: '50GB Storage', isEnabled: true },
+      { name: 'Unlimited Public Projects', isEnabled: true },
+      { name: 'Community Access', isEnabled: true },
+      { name: 'Unlimited Private Projects', isEnabled: true },
+      { name: 'Dedicated Phone Support', isEnabled: true },
+      { name: 'Free Subdomain', isEnabled: true },
+      { name: 'Monthly Status Reports', isEnabled: true },
+    ],
+  },
+];
 
 function App() {
 
-   const icontick=<TiTick />
-   const iconcross=<RxCross2 />
+ 
 
   return (
     <section id="pricing">
       
       <div className="row">
-        <Post
-          name="FREE"
-          head="$0/month"
-          p1={<>{icontick}Single User </>}
-          p2={<>{icontick}50GB Storage</>}
-          p3={<>{icontick}Unlimited Public Projects</>}
-          p4={<>{icontick}Community Access</>}
-          p5={<>{iconcross}Unlimited Private Projects</>}
-          p6={<>{iconcross}Dedicated Phone Support</>}
-          p7={<>{iconcross}Free Subdomain</>}
-          p8={<>{iconcross}Monthly Status Report</>}
-          className="pricing-column col-lg-4 col-md-6 post1">
-        </Post>
 
-        <Post
-          name="PLUS"
-          head="$9/month"
-          p1={<>{icontick}5 User</>}
-          p2={<>{icontick}50GB Storage</>}
-          p3={<>{icontick}Unlimited Public Projects</>}
-          p4={<>{icontick}Community Access</>}
-          p5={<>{icontick}Unlimited Private Projects</>}
-          p6={<>{icontick}Dedicated Phone Support</>}
-          p7={<>{icontick}Free Subdomain</>}
-          p8={<>{iconcross}Monthly Status Report</>}
-          className="pricing-column col-lg-4 col-md-6 post1">
-        </Post>
-
-        <Post
-          name="PRO"
-          head="$49/month"
-          p1={<>{icontick} Unlimited Users</>}
-          p2={<>{icontick}50GB Storage</>}
-          p3={<>{icontick}Unlimited Public Projects</>}
-          p4={<>{icontick}Community Access</>}
-          p5={<>{icontick}Unlimited Private Projects</>}
-          p6={<>{icontick}Dedicated Phone Support</>}
-          p7={<>{icontick}Free Subdomain</>}
-          p8={<>{icontick}Monthly Status Report</>}
-          className="pricing-column col-lg-4 post1">
-        </Post>
+      {plans.map((plan, index) => (
+        <Post key={index} plan={plan} />
+      ))}
+      
       </div>
    </section>
   );
